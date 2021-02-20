@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de textos</title>
+    <style>
+        address {
+            /* background-color: yellow; */
+            /* Fazendo elemento ficar na linha */
+            display: inline;
+            font-style: normal; /* retirando o itálico*/
+            /* volta o sublinhado */
+            text-decoration: underline;
+        }
+        strong{
+            color: red;
+        }
+        mark{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formatação de texto</h1>
+    <!--tag <u>  = underline (sublinhado) (NÃO USAR) -->
+    <p>Orkutilson morava na <address>Raddressa do Sobe e Desce,
+        333</address>, e seu e-mail era
+        <address>orkutilson@gmail.com.</address>
+    </p>
+    <!--
+        <i> = itálico (visual apenas)
+        <b> = negrito (bold) (visual apenas)
+    -->
+    <p>Ele estudava em uma <b>escola estadual</b> e sua matéria
+        preferida era <i>Matemática</i>.
+    </p>
+
+    <!-- <strong> = texto mais importante (forte, em inglês) (SEMÂNTICA)
+        <em> = ênfase (emphasis) (SEMÂNTICA) 
+    -->
+    <p>Ele estudava em uma <strong>escola estadual</strong> e sua matéria
+        preferida era <em>Matemática</em>.
+    </p>
+    <p>Ele também gosta de usar <mark>caneta marca texto</mark>
+        para destacar os trechos mais importantes do seu caderno.</p>
+
+    <!-- 
+        <strike> = traço através do texto (tachado) (OBSOLETO, não usar)
+     -->
+    <p>Sua professora achava que ele era <strike>meio burro</strike>
+        não muito inteligente, já que tinha dificuldade nas provas
+    </p>
+
+    <!-- <del> = texto apagado (SEMÂNTICO) -->
+    <p>Sua professora achava que ele era <del>meio burro</del>
+        não muito inteligente, já que tinha dificuldade nas provas
+    </p>
+
+    <!--  <ins> = texto inserido (SEMÂNTICO)
+     -->
+    <p> Depois que fez a recuperação, sua nota foi de 6,7 
+        <ins>o suficiente para sua aprovação</ins>
+    </p>
+
+    <!-- 
+        <sub> = texto SUBSCRITO
+        <sup> = texto SOBRESCRITO (SUPerscript)
+     -->
+    <p>Orkutilson também gostava de fórmulas. Suas preferidas eram
+        H<sub>2</sub>O e E= mc<sup>2</sup>
+    </p>
+</body>
+</html>
