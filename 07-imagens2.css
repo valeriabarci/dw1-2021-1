@@ -1,0 +1,19 @@
+/* Regras iniciadas com # se aplicam ao elemento com o Id de mesmo nome */
+#logo{
+    width: 100%; /*A imagem ocupará 100% da largura disponível */
+    max-width: 360px; /*Largura máxima em pixels */
+    min-width: 100px; /*largura mínima em pixels */
+}
+figcaption{
+    font-family: Calibri, Arial, Sans;
+    font-style: italic;
+}
+figure{
+    text-align: center;
+    background-image: url('img/light-carbonfiber.png');
+}
+body{
+    background-image: url('img/metal.jpg');
+    /* background-repeat: no-repeat; */
+}
+
