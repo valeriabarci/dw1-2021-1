@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinâmicas</title>
+</head>
+<body>
+    <!-- 
+        <picture> representa uma imagem que pode ter vários arquivos de origem ao mesmo tempo
+     -->
+    <picture>
+        <!-- É bom sempre colocar o max-width um pouco maior que a imagem para compensar as margens do documento -->
+        <source media="(max-width:630px)" srcset="img/distance-education-300px.jpg" type="image/jpeg">   
+        <source media="(max-width:1030px)" srcset="img/distance-education-600px.jpg" type="image/jpeg">
+        <img src="img/distance-education-1000px.jpg" alt="Imagem grande">
+    </picture>
+</body>
+</html>
