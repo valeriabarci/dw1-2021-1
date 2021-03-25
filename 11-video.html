@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo em HTML</title>
+</head>
+<body>
+    <h1>Vídeo em HTML</h1>
+
+    <h2>Exemplo de vídeo com múltiplas fontes</h2>
+
+    <!-- 
+        Parâmetros da tag <video>:
+        -> width: largura do vídeo
+        -> poster: a imagem que aparecerá no lugar do vídeo antes da reprodução
+     -->
+    <video controls width="400px" poster="video/reduzir-pdf-thumb.png">
+        <source src="video/reduzir-pdf.mp4" type="video/mp4">
+        <source src="video/reduzir-pdf.ogv" type="video/ogg">
+        <source src="video/reduzir-pdf.webm" type="video/webm">
+        <p>Não foi possível baixar o vídeo. Faça o <a href="video/reduzir-pdf.mp4" download="reduzir-pdf.mp4" type="video/mp4">download</a> do arquivo.</p>    
+    </video>
+</body>
+</html>
