@@ -1,0 +1,31 @@
+div.container{
+    background-color: darkgrey;
+    font-family: Calibri, Arial, sans;
+    padding: 20px;  /*Espaçamento interno */
+    border-left: 7px dotted black;
+    border-right: 7px dashed blue;
+}
+/* divs internas */
+div.container div{
+    border: 1px solid red;
+    padding: 12px;
+    margin-bottom: 16px; /*apenas a margem inferior */
+}
+#box1{
+    background-color: goldenrod;
+    /* Dois valores: o primeiro serve para top e bottom e o segundo para left e right */
+    padding: 40px 30px;
+}
+#box2{
+    background-color: lightskyblue;
+    /* padding-top: 30px;
+    padding-left: 40px;
+    padding-bottom: 25px;
+    padding-right: 8px; */
+    /* Começa pelo top e segue o sentido horário */
+    padding: 30px 8px 25px 40px;
+}
+#box3{
+    background-color: yellowgreen;
+    margin-bottom: 0px;
+}
