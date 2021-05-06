@@ -1,7 +1,20 @@
+/* @impor, quando existem, devem ser o primeiro item de um arquivo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* CSS reset */
 *{ /* Todos os elementos */
     padding: 0;
     margin: 0;
+    /* Exemplo de familia de fonte SEM serifa
+    fontfamily: Calibri, Arial, sans; */
+
+    /* Exemplo de familia de fonte COM serifa
+    font-family: Georgia, Times New Roman, serif; */
+
+    /*Exeplo de familia de fonte MONOESPAÇADA
+    font-family: Consolas, 'Courier New', monospace; */
+
+    /*Familia de fontes da web (webfonts) */
+    font-family: Raleway, 'Calibri', 'Arial', sans;
 }
 header{
     background-color: #550000;
@@ -10,4 +23,8 @@ header{
 nav ul li{
     display: inline-block;
     margin: 10px;
+}
+nav{
+    background-color: #FF7F2E; /* Cor do fundo */
+    color: #FFFFFF; /* Cor de texto */
 }
