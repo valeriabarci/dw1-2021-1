@@ -28,7 +28,8 @@
     /*Familia de fontes da web (webfonts) */
     font-family: Raleway, 'Calibri', 'Arial', sans;
     font-size: 16px;
-
+    /* Faz com que bordas e margens sejam considerados no tamanho total do elemento */
+    box-sizing: border-box;
 }
 
 html{ /* Tamanho de fonte padrão do documento */
@@ -114,7 +115,7 @@ nav{
     padding: 20px;
     /* Este elemento e seus filhos usarão flexbox */
     display: flex;
-    flex-direction: row; /* Os filhos ficarão em linha */
+    flex-direction: row; /* Os filhos ficarão em linha, na horizontal */
 }
 
 main, aside{
@@ -126,6 +127,7 @@ main, aside{
     /* Sombra (drop-down shadow) */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
     flex-grow: 1; /* 1 unidade de largura (padrão) */
+    max-width: 100%;
 }
 
 main{
@@ -171,13 +173,11 @@ article > h2{
     background-color: var(--cor-secundaria-clara);
     padding: 24px;
     border-radius: 4px; /* Bordas LEVEMENTE arredondadas */
-
 }
 
 .destaque p{
     color: #000000;
-    font-size: 1.5rem;
-    
+    font-size: 1.5rem;    
 }
 
 .destaque > h1 > a{
@@ -192,11 +192,13 @@ article > h2{
     width: 450px;
     margin-right: 24px;
     border-radius: 4px;
+    /* LArgura máxima limitada à largura do pai */
+    max-width: 100%;
 }
 
 .foto-texto{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* OS filhos ficarão em linha, na horizontal */
 }
 
 aside > article > img{
@@ -245,3 +247,63 @@ footer img{
     height: 100%;
 }
 
+/* Regras para larguras específicas de tela */
+@media screen and (max-width: 1020px){ /* Breakpoint (ponto de quebra) */
+    main{
+        width: 60%;
+    }
+    aside{
+        width: 40%;
+    }
+
+    .foto-texto{
+        flex-direction: column; /* OS filhos ficarão em coluna, na vertical */
+    }
+
+    .destaque img{
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    /*
+        A FAZER: Colocar o menu em um botão
+    */
+    #content{
+        flex-direction: column; /* Os filhos ficarão em coluna, na vertical */
+    }
+    main{
+        width: 100%;
+    }
+    aside{
+        margin-left: 0;
+        width: 100%;  
+    }
+    aside > article > h1{
+        text-align: center;
+    }
+    .destaque img{
+        /* Centralizar a imagem */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer > *{ /* Todos os filhos DIRETOS de footer */
+        margin-bottom: 12px;
+    }
+    footer ul li:first-child{ /* Só o primeiro(first-child) li */
+        padding-left: 0;
+    }
+    footer address{
+        text-align: right;
+    }
+}
+@media screen and (max-width: 640px){
+    /*
+    A FAZER: colocar o logo principal e os ícones de redes sociais em coluna
+    */
+}
